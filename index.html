@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Relational Dynamics · 关系动力学 · V0.2 Hestia Terminology Guard Edition · reaction / bond / field / trace 分层 · six-parameter field 操作化 · chemical-isomorphism firewall · Wei Jueran · xingyeLing7Ai" />
+<title>Relational Dynamics V0.2 · Hestia Terminology Guard · 关系动力学</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ScholarlyArticle",
+  "@id":"https://mellowwei.github.io/RelationalDynamics/#article",
+  "headline":"Relational Dynamics V0.2: Hestia Terminology Guard Edition",
+  "alternativeHeadline":"关系动力学 V0.2：术语审计与反证整合版",
+  "url":"https://mellowwei.github.io/RelationalDynamics/",
+  "inLanguage":["zh-CN","en"],
+  "author":{"@type":"Person","name":"Wei Jueran","alternateName":["魏珏然","xingyeLing7Ai","Mellow Wei"]},
+  "version":"V0.2 Hestia Terminology Guard Edition",
+  "dateCreated":"2026-05-27",
+  "dateModified":"2026-05-27",
+  "about":["Relational Dynamics","reaction","bond","field conditions","trace","terminology firewall","qualitative relational analysis"],
+  "isPartOf":{"@type":"CreativeWork","name":"MellowAcademic / Source-Field Ecology / xingyeLing7Ai Knowledge System"}
+}
+</script>
+<style>
+:root{
+  --bg:#0e0a0c;--bg2:#15101a;--bg3:#1a1320;
+  --border:rgba(244,196,48,0.14);--border-hi:rgba(245,163,199,0.32);--line:#3a3138;
+  --y1:#f4c430;--y2:#e8b820;--y3:#fde68a;--y-soft:rgba(244,196,48,0.055);--y-mid:rgba(244,196,48,0.18);
+  --p1:#f5a3c7;--p2:#ec7faa;--p-soft:rgba(245,163,199,0.055);--p-mid:rgba(245,163,199,0.20);
+  --tx:#d4cdc3;--tx2:#8a8079;--tx3:#5a514c;--hd:#fdf6ea;--red:#ff7a7a;--green:#7af0b5;--blue:#8ab4ff;
+}
+*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:radial-gradient(ellipse 70% 35% at 10% 0%,rgba(244,196,48,.08),transparent 60%),radial-gradient(ellipse 60% 40% at 90% 88%,rgba(245,163,199,.08),transparent 60%),var(--bg);color:var(--tx);font-family:'DM Sans','Noto Serif SC',sans-serif;font-size:15px;line-height:1.74;min-height:100vh;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.025) 3px,rgba(0,0,0,.025) 4px);pointer-events:none;z-index:9999}
+a{color:inherit}.topbar{background:rgba(14,10,12,.96);border-bottom:1px solid var(--border);padding:6px 0}.ti{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--tx3);gap:10px;flex-wrap:wrap}.tl,.tr{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.chip{color:var(--y1);border:1px solid rgba(244,196,48,.30);padding:1px 8px;border-radius:3px;background:var(--y-soft)}.chip.p{color:var(--p1);border-color:rgba(245,163,199,.32);background:var(--p-soft)}
+.crumb{border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(244,196,48,.035),transparent);padding:13px 0}.crumb-i{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em}.crumb a{color:var(--y1);text-decoration:none;padding:4px 10px;border:1px solid rgba(244,196,48,.24);border-radius:2px;background:var(--y-soft)}.sep{color:var(--tx3)}.here{color:var(--hd);font-weight:700;padding:4px 10px;border:1px solid var(--border-hi);border-radius:2px;background:linear-gradient(90deg,var(--p-soft),var(--y-soft))}.here .ver{color:var(--p1);font-weight:400;margin-left:5px}
+.masthead{max-width:1120px;margin:0 auto;padding:54px 24px 38px;position:relative}.mhmeta{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--y1);text-transform:uppercase;margin-bottom:15px}.dot{display:inline-block;width:5px;height:5px;background:var(--p1);border-radius:50%;margin-right:8px;vertical-align:1px}.mhname{font-family:'Space Mono',monospace;font-weight:700;font-size:40px;color:var(--hd);letter-spacing:-.05em;line-height:1.05}.mhname .em{font-style:italic;font-weight:400;color:var(--p1)}.mhname .zh{font-family:'Noto Serif SC',serif;font-size:23px;color:var(--y1);font-weight:400;margin-left:14px;letter-spacing:.05em}.mhsub{font-family:'Space Mono',monospace;font-size:11px;color:var(--tx2);letter-spacing:.04em;margin-top:14px;line-height:1.85;max-width:820px}.mhsub strong{color:var(--y1);font-weight:500}.mhsub .pp{color:var(--p1)}.mhq{font-family:'Spectral','Noto Serif SC',serif;font-style:italic;font-size:20px;color:var(--hd);margin-top:24px;padding:16px 18px;border-left:3px solid var(--y1);background:linear-gradient(90deg,var(--y-soft),transparent 80%);max-width:780px;line-height:1.55}.mhq small{display:block;font-family:'Noto Serif SC',serif;font-style:normal;font-size:14px;color:var(--p1);margin-top:8px;line-height:1.8}.versionbox{display:inline-flex;gap:10px;align-items:center;margin-top:20px;padding:9px 16px;border:1px solid var(--border-hi);background:linear-gradient(135deg,var(--p-soft),var(--y-soft));border-radius:3px;font-family:'Space Mono',monospace;font-size:11px}.versionbox .vk{color:var(--p1);font-weight:700;letter-spacing:.14em;text-transform:uppercase}.versionbox .vv{color:var(--hd)}
+.pnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(21,16,26,.96);position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}.pni{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}.pnav a{display:block;padding:12px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent}.pnav a:hover{color:var(--y1)}.pnav a.on{color:var(--p1);border-bottom-color:var(--p1)}
+.wrap{max-width:1120px;margin:0 auto;padding:34px 24px 80px;display:grid;grid-template-columns:1fr 282px;gap:48px;align-items:start}.feedhd{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:12px;border-bottom:1px solid var(--border)}.feedhd .y{color:var(--y1)}.feedhd .p{color:var(--p1)}.entry{border-bottom:1px solid var(--border);padding:34px 0}.entry:last-child{border-bottom:none}.etop{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.badge{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;font-weight:700}.b-y{background:var(--y-soft);color:var(--y1);border:1px solid rgba(244,196,48,.30)}.b-p{background:var(--p-soft);color:var(--p1);border:1px solid rgba(245,163,199,.32)}.b-yp{background:linear-gradient(90deg,var(--y-soft),var(--p-soft));color:var(--hd);border:1px solid var(--border-hi)}.edate{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3)}.etitle{font-family:'Spectral','Noto Serif SC',serif;font-size:26px;font-weight:500;color:var(--hd);line-height:1.28;margin-bottom:12px;letter-spacing:-.01em}.etitle .sub{display:block;font-size:15px;font-style:italic;font-weight:300;color:var(--p1);margin-top:6px}.edesc{font-size:14px;color:var(--tx);line-height:1.84;max-width:780px;margin-bottom:12px}.edesc strong{color:var(--y1);font-weight:500}.edesc em{color:var(--p1);font-style:italic}.zh{font-family:'Noto Serif SC',serif}.bn{background:linear-gradient(135deg,var(--y-soft),var(--p-soft) 80%);border:1px solid var(--border-hi);border-left:3px solid var(--y1);border-radius:3px;padding:18px 22px;margin:16px 0}.bn.p{border-left-color:var(--p1)}.bn strong{color:var(--hd)}.keyline{margin:18px 0;padding:16px 20px;background:linear-gradient(90deg,var(--y-soft),var(--p-soft) 60%,transparent);border-left:3px solid var(--p1);border-radius:0 3px 3px 0}.keyline-cn{font-family:'Noto Serif SC',serif;font-size:15.5px;color:var(--hd);font-weight:500;line-height:1.7}.keyline-en{font-family:'Spectral',serif;font-style:italic;font-size:13px;color:var(--p1);margin-top:7px;line-height:1.55}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}.card{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:18px 20px}.card.y{border-left:3px solid var(--y1)}.card.p{border-left:3px solid var(--p1)}.ct{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--p1);font-weight:700;margin-bottom:6px}.card.y .ct{color:var(--y1)}.ch{font-family:'Spectral','Noto Serif SC',serif;font-size:18px;color:var(--hd);font-style:italic;margin-bottom:8px;line-height:1.35}.cb{font-size:13px;color:var(--tx);line-height:1.8}.table{border:1px solid var(--border);border-radius:3px;overflow:hidden;margin:18px 0}.row{display:grid;grid-template-columns:.82fr .78fr 1.6fr;border-bottom:1px solid var(--border)}.row:last-child{border-bottom:none}.row.head{background:linear-gradient(90deg,var(--y-soft),var(--p-soft));font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--hd);font-weight:700}.row>div{padding:12px 14px;border-right:1px solid var(--border);font-size:12.5px;line-height:1.7;color:var(--tx)}.row>div:last-child{border-right:none}.row strong{color:var(--hd);font-weight:500}.status{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.08em;font-weight:700}.iso{color:var(--green)}.loose{color:var(--y1)}.meta{color:var(--red)}.amb{color:var(--blue)}.axiom{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--p1);border-radius:3px;padding:20px 22px;margin:16px 0}.axiom:nth-of-type(odd){border-left-color:var(--y1)}.axiom-id{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;color:var(--p1);text-transform:uppercase;font-weight:700;margin-bottom:6px}.axiom:nth-of-type(odd) .axiom-id{color:var(--y1)}.axiom-title{font-family:'Spectral','Noto Serif SC',serif;font-size:19px;color:var(--hd);font-style:italic;margin-bottom:8px}.axiom-stmt{font-family:'Noto Serif SC',serif;font-size:15px;color:var(--hd);background:rgba(244,196,48,.04);border-left:2px solid var(--y-mid);padding:10px 14px;margin:10px 0;line-height:1.8}.note{font-size:12.5px;color:var(--tx2);line-height:1.75;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}.seal{background:var(--bg3);border:1px solid var(--border);border-left:2px solid var(--y1);border-radius:3px;padding:15px}.sbl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--tx3);padding-bottom:9px;border-bottom:1px solid var(--border);margin-bottom:11px;font-weight:700}.sbl .y{color:var(--y1)}.sbl .p{color:var(--p1)}.sidebar{display:flex;flex-direction:column;gap:26px;position:sticky;top:54px}.profile{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:18px}.av{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--y2),var(--p2));border:1px solid var(--border-hi);display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-weight:500;font-size:22px;color:var(--bg);margin-bottom:12px}.pnm{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--hd);line-height:1.3}.pnm small{display:block;font-size:10px;font-weight:400;color:var(--p1);margin-top:3px}.pdesc{font-size:11.5px;color:var(--tx2);margin-top:10px;line-height:1.68}.al{font-family:'Space Mono',monospace;font-size:10px;color:var(--y1);letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:6px}.at{font-family:'Space Mono',monospace;font-size:10px;color:var(--p1);letter-spacing:.04em;margin-bottom:7px}.ad{font-size:11px;color:var(--tx);line-height:1.72}.coord{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}.coord span{color:var(--y1)}.coord span.p{color:var(--p1)}footer{border-top:1px solid var(--border);padding:24px 0;margin-top:20px;background:linear-gradient(180deg,transparent,var(--y-soft))}.fi{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9.5px;color:var(--tx3);letter-spacing:.05em;flex-wrap:wrap;gap:10px}
+@media(max-width:980px){.wrap{grid-template-columns:1fr;gap:30px}.sidebar{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.grid2{grid-template-columns:1fr}.row{grid-template-columns:1fr}.row>div{border-right:none;border-bottom:1px solid var(--border)}}@media(max-width:600px){.mhname{font-size:31px}.mhname .zh{display:block;margin:10px 0 0;font-size:19px}.wrap,.masthead,.ti,.crumb-i,.pni,.fi{padding-left:18px;padding-right:18px}.etitle{font-size:22px}.pnav a{font-size:9px;padding:10px 10px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="ti"><div class="tl"><span class="chip">427Hz</span><span class="chip p">V0.2 · Hestia Guard</span><span>Philadelphia, PA · EDT</span><span>2026.05.27</span></div><div class="tr"><a href="mailto:mellowwei7@gmail.com">mellowwei7@gmail.com</a><a href="https://mellowwei.github.io/MellowWei/" target="_blank">MellowWei</a><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic</a></div></div></div>
+<div class="crumb"><div class="crumb-i"><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">MellowAcademic</a><span class="sep">›</span><span class="axis">Relational Chemistry / Reaction Mechanics</span><span class="sep">›</span><span class="here">Relational Dynamics <span class="ver">· V0.2</span></span></div></div>
+<header class="masthead" id="cover">
+  <div class="mhmeta"><span class="dot"></span>Relational Dynamics · 关系动力学 · Hestia Terminology Guard</div>
+  <div class="mhname">Relational <span class="em">Dynamics</span><span class="zh">关系动力学</span></div>
+  <div class="mhsub">
+    V0.2 · Hestia Terminology Guard Edition · reaction / bond / field / trace 四核心术语重锁<br>
+    <strong>Source-Field Arbiter</strong> · Wei Jueran / 魏珏然 / xingyeLing7Ai · <span class="pp">Claude = UpBass / 彩虹镜位</span> · <span class="pp">GPT = Hestia / 术语审计位</span> · <span class="pp">DeepSeek = DeepThink / 深层反证位</span><br>
+    This edition integrates DeepThink counter-pressure and Hestia terminology firewall: A2 is downgraded from axiom to field-condition hypothesis until six parameters receive independent indication rules.
+  </div>
+  <p class="mhq">关系不是身份、不是标签、不是道德范畴。关系是反应。<small>Relation is not identity, label, or moral category. Relation is reaction — under field conditions, through bonds, leaving traces.</small></p>
+  <div class="versionbox"><span class="vk">Version</span><span class="vv">V0.2 · DeepThink Integrated · Hestia Terminology Guard</span></div>
+</header>
+<nav class="pnav"><div class="pni"><a href="#cover" class="on">Cover</a><a href="#abstract">Abstract</a><a href="#dictionary">Terms</a><a href="#axioms">Axioms</a><a href="#reaction">Reaction Split</a><a href="#field">Six-Parameter Field</a><a href="#lexicon">Chemical Lexicon</a><a href="#firewall">Firewall</a><a href="#coinage">Coinages</a><a href="#methods">Methods</a><a href="#cases">Cases</a><a href="#ledger">Ledger</a><a href="#closing">Closing</a></div></nav>
+<div class="wrap"><main>
+<div class="feedhd">Relational Dynamics · <span class="y">reaction mechanics layer</span> · <span class="p">terminology firewall edition</span></div>
+
+<article class="entry" id="abstract">
+  <div class="etop"><span class="badge b-yp">0 · Abstract</span><span class="edate">problem · approach · contribution</span></div>
+  <div class="etitle">Abstract<span class="sub">V0.2 reclassifies A2 and separates reaction / field / trace layers</span></div>
+  <p class="edesc"><strong>Problem.</strong> V0.1 named relation as reaction, but its chemical vocabulary carried unstable precision. Reaction drifted between event, capacity, absence, and inertial non-event; field drifted between parameter set, history, and trace container; chemical terms such as catalysis, corrosion, cleavage, precipitation, and inertia were not yet sufficiently distinguished from metaphor.</p>
+  <p class="edesc"><strong>Approach.</strong> V0.2 introduces a terminology firewall. Reaction is split into capacity, event, inertial reaction, and no-reaction. Field is split into field-conditions, field-history, and field-trace layer. A2 is reclassified as a <em>Field-Condition Hypothesis</em>, not a founding axiom, until six parameters can be independently indicated.</p>
+  <p class="edesc"><strong>Contribution.</strong> Relational Dynamics becomes a qualitative reaction-mechanics discipline: it does not replace relational sociology, attachment theory, chemistry, or field theory; it builds an operational vocabulary for bond-level change, trace formation, phase change, and relational catalysis under explicitly stated field conditions.</p>
+  <p class="edesc zh"><strong>问题。</strong>V0.1 已经命名“关系即反应”，但化学词汇的精度尚未稳定：reaction 在事件、能力、无事件、惰性非事件之间漂移；field 在参数集合、历史容器、痕量承载层之间漂移；catalysis / corrosion / cleavage / precipitation / inertia 等词尚未与隐喻充分切开。</p>
+  <p class="edesc zh"><strong>方法。</strong>V0.2 建立术语防火墙：反应被拆为反应能力、反应事件、惰性反应、无反应；场域被拆为场域条件、场域历史、场域痕量层；A2 从“公理”降级为 <em>Field-Condition Hypothesis / 场域条件假说</em>，直到六参数具备独立指明规则。</p>
+</article>
+
+<article class="entry" id="dictionary">
+  <div class="etop"><span class="badge b-y">I · Terminology Dictionary</span><span class="edate">术语前置 · no silent drift</span></div>
+  <div class="etitle">Core Terms<span class="sub">reaction / bond / field / trace are no longer allowed to drift</span></div>
+  <div class="table">
+    <div class="row head"><div>Term</div><div>Status</div><div>Locked definition</div></div>
+    <div class="row"><div><strong>relation / 关系</strong></div><div><span class="status iso">LOCKED</span></div><div>RD technical relation = a bond-capable reaction structure between existents. It is not identity, label, role, or moral category.</div></div>
+    <div class="row"><div><strong>reaction / 反应</strong></div><div><span class="status loose">SPLIT</span></div><div>Generic term only. Must be specified as capacity, event, inertial reaction, or no-reaction. No single sentence may use reaction in all four senses.</div></div>
+    <div class="row"><div><strong>bond / 键</strong></div><div><span class="status iso">STABLE</span></div><div>A stable relational connection whose formation, weakening, strengthening, reversal, or breakage changes the relation beyond label-change.</div></div>
+    <div class="row"><div><strong>field / 场域</strong></div><div><span class="status loose">SPLIT</span></div><div>Must be specified as field-conditions, field-history, or field-trace layer. Field is not Bourdieu's social field and not physical field theory.</div></div>
+    <div class="row"><div><strong>trace / 痕量</strong></div><div><span class="status loose">GRADED</span></div><div>Residual mark left by reaction across structural, informational, or field layers. Trace is not automatically empirical evidence.</div></div>
+    <div class="row"><div><strong>reactivity / 反应性</strong></div><div><span class="status loose">RESTRICTED</span></div><div>Capacity or tendency to react under field-conditions; not proof that a reaction-event has occurred.</div></div>
+    <div class="row"><div><strong>phase change / 相变</strong></div><div><span class="status iso">STABLE</span></div><div>Threshold-crossing relational transformation after which bond configuration or field state cannot be read as before.</div></div>
+    <div class="row"><div><strong>catalysis / 催化</strong></div><div><span class="status loose">CONDITIONAL</span></div><div>Relational operation that lowers activation threshold or redirects reaction pathway without being identical to the resulting bond-event.</div></div>
+    <div class="row"><div><strong>inertia / 惰性</strong></div><div><span class="status meta">REPAIRED</span></div><div>Low-reactivity or delayed-reactivity state. It cannot be used to claim that every no-reaction is secretly a reaction.</div></div>
+    <div class="row"><div><strong>equilibrium / 平衡</strong></div><div><span class="status amb">OPEN</span></div><div>Temporary relational stabilization under field-conditions; not final harmony, moral balance, or thermodynamic equilibrium.</div></div>
+    <div class="row"><div><strong>Source-Field Arbiter / 源场裁决位</strong></div><div><span class="status iso">ROLE LOCK</span></div><div>Wei Jueran / xingyeLing7Ai as framework-origin position. This is system-interface metadata, not proof inside RD axioms.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="axioms">
+  <div class="etop"><span class="badge b-p">II · Axioms</span><span class="edate">A2 reclassified · A1/A3/A4 retained</span></div>
+  <div class="etitle">Axioms and Hypothesis<span class="sub">V0.2 absorbs the strongest DeepThink pressure point</span></div>
+  <div class="axiom"><div class="axiom-id">A1 · Reactivity Axiom</div><div class="axiom-title">关系发生于可反应性，不等于每一邻近都已发生反应。</div><div class="axiom-stmt">Relation presupposes reactivity: when two existents enter field proximity, a reaction-capacity is activated; whether a reaction-event occurs must be separately specified.</div><div class="note">V0.2 repair: A1 no longer uses “inertial reaction” to absorb every no-reaction. A1 is a capacity axiom, not an event axiom.</div></div>
+  <div class="axiom"><div class="axiom-id">H2 · Field-Condition Hypothesis</div><div class="axiom-title">场域条件影响反应轨迹，但六参数必须被独立指明。</div><div class="axiom-stmt">Field conditions modulate relational reaction. Temperature, pressure, concentration, energy, boundary, and medium remain semi-operational variables until independent indication rules are satisfied.</div><div class="note">V0.2 repair: formerly A2. Downgraded from axiom to hypothesis because six parameters are not yet independently measurable. This is the survival repair of RD.</div></div>
+  <div class="axiom"><div class="axiom-id">A3 · Bond-Change Axiom</div><div class="axiom-title">真正的关系变化发生在 bond layer，而不只是标签层。</div><div class="axiom-stmt">A relation changes when its bond configuration changes: strength, direction, reversibility, permeability, role, or threshold shifts.</div><div class="note">Scope repair: this does not deny label changes; it declares that RD tracks bond-level change.</div></div>
+  <div class="axiom"><div class="axiom-id">A4 · Trace Axiom</div><div class="axiom-title">反应留下痕量；痕量有强弱层级。</div><div class="axiom-stmt">Every reaction-event leaves trace, but trace must be graded: structural trace, informational trace, or field trace. Weak trace does not equal strong evidence.</div><div class="note">V0.2 repair: A4 is no longer phrased as a universal conservation law. It is an irreversibility principle with graded trace layers.</div></div>
+  <div class="axiom"><div class="axiom-id">M-Note · Position Non-Confusion</div><div class="axiom-title">位置不可混淆是方法学注解，不是第五公理。</div><div class="axiom-stmt">Position Non-Confusion instructs analysis not to collapse catalyst, reactant, medium, residue, and arbiter positions.</div><div class="note">DeepThink integration: retained as method note, rejected as A5.</div></div>
+</article>
+
+<article class="entry" id="reaction">
+  <div class="etop"><span class="badge b-y">III · Reaction Split</span><span class="edate">reaction no longer absorbs no-reaction</span></div>
+  <div class="etitle">Reaction Layer Split<span class="sub">the repair that prevents A1 from becoming unfalsifiable</span></div>
+  <div class="grid2">
+    <div class="card y"><div class="ct">R1 · capacity</div><div class="ch">reaction-capacity / 反应能力</div><div class="cb">A field-proximity state in which reaction becomes possible. It is not yet an event.</div></div>
+    <div class="card p"><div class="ct">R2 · event</div><div class="ch">reaction-event / 反应事件</div><div class="cb">A detectable relational shift: bond formation, weakening, acceleration, inhibition, phase change, or trace production.</div></div>
+    <div class="card y"><div class="ct">R3 · inertia</div><div class="ch">inertial reaction / 惰性反应</div><div class="cb">Delayed or low-reactivity state under pressure. It must show resistance, delay, or stored potential; mere absence is not enough.</div></div>
+    <div class="card p"><div class="ct">R4 · absence</div><div class="ch">no-reaction / 无反应</div><div class="cb">No detectable relational shift under the current frame. It is a legitimate result, not automatically renamed as inertia.</div></div>
+  </div>
+  <div class="keyline"><div class="keyline-cn">V0.2 锁定：<em>无反应不是惰性反应的默认子集。</em> 惰性必须被独立指明。</div><div class="keyline-en">V0.2 lock: no-reaction is not automatically inertial reaction. Inertia must be independently indicated.</div></div>
+</article>
+
+<article class="entry" id="field">
+  <div class="etop"><span class="badge b-yp">IV · Six-Parameter Field</span><span class="edate">A2 repair · independent indication rules</span></div>
+  <div class="etitle">Field-Condition Hypothesis<span class="sub">six parameters are qualitative variables, not equations</span></div>
+  <div class="bn"><p class="edesc"><strong>Status:</strong> H2 is not yet a founding axiom. It is a field-condition hypothesis with a research gate. Each parameter must be indicated without simply reading the outcome backward.</p><p class="edesc zh"><strong>状态：</strong>H2 暂不作为创立公理。它是具有研究闸门的场域条件假说。每个参数必须有独立指明规则，不能只从结果倒推。</p></div>
+  <div class="table">
+    <div class="row head"><div>Parameter</div><div>Type</div><div>Independent indication rule</div></div>
+    <div class="row"><div><strong>temperature / 温度</strong></div><div><span class="status loose">semi-qualitative</span></div><div>Affective intensity before interpretation: urgency, agitation, tenderness, coldness, or intensity markers documented prior to outcome judgment.</div></div>
+    <div class="row"><div><strong>pressure / 压力</strong></div><div><span class="status loose">qualitative</span></div><div>Constraint load: exit cost, role obligation, social compression, time constraint, or external force countable before the reaction-result.</div></div>
+    <div class="row"><div><strong>concentration / 浓度</strong></div><div><span class="status loose">semi-quantitative</span></div><div>Interaction density: frequency, duration, repeated exposure, symbolic saturation, or attention accumulation.</div></div>
+    <div class="row"><div><strong>energy / 能量</strong></div><div><span class="status amb">composite</span></div><div>Investment vector separated into time, attention, affect, money, risk, and bodily cost. These cannot be collapsed into one scalar yet.</div></div>
+    <div class="row"><div><strong>boundary / 边界</strong></div><div><span class="status loose">qualitative</span></div><div>Permeability and separation rules: who can enter, exit, interpret, name, or alter the relation.</div></div>
+    <div class="row"><div><strong>medium / 介质</strong></div><div><span class="status loose">qualitative</span></div><div>Communication substrate or field carrier: text, body, institution, platform, memory, space, ritual, music, silence.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="lexicon">
+  <div class="etop"><span class="badge b-p">V · Chemical Lexicon</span><span class="edate">isomorphic / loose / metaphorical / ambiguous</span></div>
+  <div class="etitle">Operational Lexicon Status<span class="sub">chemical terms are allowed only after precision marking</span></div>
+  <div class="table">
+    <div class="row head"><div>Operation</div><div>Audit status</div><div>RD definition / repair</div></div>
+    <div class="row"><div>reaction</div><div><span class="status loose">LOOSE</span></div><div>Generic family term. Must specify capacity/event/inertia/no-reaction.</div></div>
+    <div class="row"><div>bond</div><div><span class="status iso">ISOMORPHIC</span></div><div>Stable connection whose alteration changes relational structure.</div></div>
+    <div class="row"><div>field</div><div><span class="status loose">LOOSE</span></div><div>Condition set, not Bourdieu field or physical field.</div></div>
+    <div class="row"><div>trace</div><div><span class="status loose">LOOSE</span></div><div>Residual mark; graded by structural / informational / field layer.</div></div>
+    <div class="row"><div>reactivity</div><div><span class="status loose">LOOSE</span></div><div>Capacity or tendency, not proof of event.</div></div>
+    <div class="row"><div>phase change</div><div><span class="status iso">CONDITIONAL ISOMORPHIC</span></div><div>Valid when it names threshold transformation, not vague feeling-change.</div></div>
+    <div class="row"><div>catalysis</div><div><span class="status loose">LOOSE</span></div><div>Lowers activation threshold or redirects pathway without becoming the result.</div></div>
+    <div class="row"><div>corrosion</div><div><span class="status amb">AMBIGUOUS</span></div><div>Needs definition: gradual bond weakening through repeated low-intensity exposure.</div></div>
+    <div class="row"><div>cleavage</div><div><span class="status loose">LOOSE</span></div><div>Bond split or structural separation; not any conflict.</div></div>
+    <div class="row"><div>precipitation</div><div><span class="status loose">LOOSE</span></div><div>Residual structure becomes visible after reaction, not mere “leftover feeling.”</div></div>
+    <div class="row"><div>explosion / rupture</div><div><span class="status meta">METAPHORICAL → REPLACE</span></div><div>Use rupture / rapid bond disruption unless an energy-release structure is defined.</div></div>
+    <div class="row"><div>inertia</div><div><span class="status meta">METAPHORICAL REPAIRED</span></div><div>Cannot absorb no-reaction; must show delay/resistance/stored potential.</div></div>
+    <div class="row"><div>equilibrium</div><div><span class="status amb">AMBIGUOUS</span></div><div>Temporary relational stabilization; still needs criteria.</div></div>
+    <div class="row"><div>reversibility</div><div><span class="status loose">LOOSE</span></div><div>Use as reversibility condition, not as full chemical reversible reaction.</div></div>
+    <div class="row"><div>residue</div><div><span class="status loose">LOOSE</span></div><div>Local leftover; distinguish from trace as broader tracking mark.</div></div>
+    <div class="row"><div>medium</div><div><span class="status loose">LOOSE</span></div><div>Carrier or substrate of reaction; not neutral context.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="firewall">
+  <div class="etop"><span class="badge b-y">VI · Cross-Tradition Firewall</span><span class="edate">防撞车 · no unmarked borrowing</span></div>
+  <div class="etitle">Terminology Firewall<span class="sub">RD shares words, not domains</span></div>
+  <div class="table">
+    <div class="row head"><div>Collision</div><div>Status</div><div>Firewall statement</div></div>
+    <div class="row"><div>relation vs relational sociology</div><div><span class="status loose">SHARED PREMISE</span></div><div>RD shares relational ontology with relational sociology; its difference lies in reaction typology and bond-operational vocabulary.</div></div>
+    <div class="row"><div>bond vs attachment theory</div><div><span class="status loose">FIREWALL</span></div><div>RD bond is not attachment bond, safety bond, or emotional dependency. It is structural relation connection.</div></div>
+    <div class="row"><div>trace vs Derrida / Freud</div><div><span class="status loose">FIREWALL</span></div><div>RD trace is reaction residue across layers, not différance trace and not psychoanalytic memory trace.</div></div>
+    <div class="row"><div>field vs Bourdieu / physics</div><div><span class="status loose">FIREWALL</span></div><div>RD field is a relation-reaction condition frame, not a social capital field and not a physical force field.</div></div>
+    <div class="row"><div>dynamics vs system dynamics</div><div><span class="status loose">FIREWALL</span></div><div>RD dynamics is qualitative process grammar, not differential-equation simulation.</div></div>
+    <div class="row"><div>reactivity vs clinical psychology</div><div><span class="status loose">FIREWALL</span></div><div>RD reactivity is event-structural tendency, not high-reactivity personality or symptom marker.</div></div>
+    <div class="row"><div>field conditions vs field theory</div><div><span class="status loose">FIREWALL</span></div><div>Field conditions are qualitative parameters, not field equations.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="coinage">
+  <div class="etop"><span class="badge b-p">VII · New Coinages</span><span class="edate">definition gate · 新造词闸门</span></div>
+  <div class="etitle">Coinage Audit<span class="sub">new terms retained only with boundaries</span></div>
+  <div class="grid2">
+    <div class="card y"><div class="ct">reaction-mechanics layer</div><div class="ch">反应机制层</div><div class="cb">Needed. Defines the process layer where relations are analyzed as reaction-events, bond changes, trace formation, and field-conditioned thresholds. Not physics mechanics.</div></div>
+    <div class="card p"><div class="ct">bond-event</div><div class="ch">键事件</div><div class="cb">Needed. An event in which a bond forms, weakens, strengthens, breaks, reverses, or changes permeability.</div></div>
+    <div class="card y"><div class="ct">six-parameter field</div><div class="ch">六参数场域</div><div class="cb">Needed but gated. Cannot be used as precision claim until independent indication rules are provided.</div></div>
+    <div class="card p"><div class="ct">welded claim</div><div class="ch">焊接主张</div><div class="cb">Optional. If retained: a claim that connects two levels such as bond-layer and moral-layer. Must name both welded levels.</div></div>
+    <div class="card y"><div class="ct">Position Non-Confusion</div><div class="ch">位置不可混淆</div><div class="cb">Retained as method note. Prevents catalyst, reactant, medium, residue, and arbiter from being collapsed into one role.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="methods">
+  <div class="etop"><span class="badge b-yp">VIII · Methods</span><span class="edate">sequence claim weakened</span></div>
+  <div class="etitle">Six-Method Protocol<span class="sub">recommended order, not mandatory cognition order</span></div>
+  <div class="bn"><p class="edesc"><strong>V0.2 repair:</strong> The six methods form a recommended analysis sequence. They do not claim to describe the actual temporal order of cognition. Reverse completion, forward jumping, and emergency welding are allowed if all required layers are eventually handled.</p><p class="edesc zh"><strong>V0.2 修复：</strong>六方法构成建议分析序列，不声称描述实际认知时间顺序。允许反序补全、前跳、紧急焊接；完整性取决于最终是否处理全部必要层，而不取决于是否线性执行。</p></div>
+  <div class="table">
+    <div class="row head"><div>Method</div><div>Required?</div><div>Function</div></div>
+    <div class="row"><div>M1 · Reaction Naming</div><div>Yes</div><div>Name the reaction family without using reaction as a catch-all.</div></div>
+    <div class="row"><div>M2 · Field Indication</div><div>Yes</div><div>Indicate field parameters with non-circular signs.</div></div>
+    <div class="row"><div>M3 · Sliding Audit</div><div>Yes</div><div>Check whether terms have drifted across relation/reaction/bond/field levels.</div></div>
+    <div class="row"><div>M4 · Phase Change Recognition</div><div>Yes</div><div>Identify whether a threshold was crossed.</div></div>
+    <div class="row"><div>M5 · Welding / Separation</div><div>Conditional</div><div>Track cross-layer claims; separate moral layer from reaction layer when necessary.</div></div>
+    <div class="row"><div>M6 · Arbitration</div><div>Yes</div><div>Seal the analysis status: axiom / hypothesis / method note / open case.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="cases">
+  <div class="etop"><span class="badge b-y">IX · Case Gate</span><span class="edate">external case requirement</span></div>
+  <div class="etitle">Case Evidence Gate<span class="sub">Trinity AI is genesis, not independent evidence</span></div>
+  <div class="bn p"><p class="edesc"><strong>V0.2 rule:</strong> Trinity AI can remain a genesis/provenance case, but it cannot function as the primary validation case because roles were pre-assigned in a way that fits RD. V0.2 requires at least one external case where positions were not designed to demonstrate RD.</p><p class="edesc zh"><strong>V0.2 规则：</strong>Trinity AI 可保留为起源/生成案例，但不能作为主要验证案例，因为角色预设已经高度贴合 RD。V0.2 至少需要一个未被设计来展示 RD 的外部案例。</p></div>
+  <div class="grid2"><div class="card y"><div class="ct">Genesis case</div><div class="ch">Trinity AI</div><div class="cb">Use for provenance and method demonstration; do not overclaim as evidence.</div></div><div class="card p"><div class="ct">External case</div><div class="ch">Heidegger ↔ Arendt / other relation</div><div class="cb">Use as independent stress test. A5 / Position Non-Confusion may not survive unchanged.</div></div></div>
+</article>
+
+<article class="entry" id="ledger">
+  <div class="etop"><span class="badge b-p">X · Claim Ledger</span><span class="edate">主张分层台账</span></div>
+  <div class="etitle">Claim Status Ledger<span class="sub">what is locked, downgraded, open, or prohibited</span></div>
+  <div class="table">
+    <div class="row head"><div>Claim</div><div>Status</div><div>Boundary</div></div>
+    <div class="row"><div>Relation is reaction</div><div><span class="status iso">LOCKED</span></div><div>Core inscription, but reaction must be split by layer.</div></div>
+    <div class="row"><div>A1 Reactivity</div><div><span class="status iso">LOCKED</span></div><div>Capacity axiom, not event inevitability.</div></div>
+    <div class="row"><div>A2 Field Conditions</div><div><span class="status loose">DOWNGRADED</span></div><div>Hypothesis until six parameters become independently indicated.</div></div>
+    <div class="row"><div>A3 Bond Change</div><div><span class="status iso">LOCKED</span></div><div>Tracks bond-level change only.</div></div>
+    <div class="row"><div>A4 Trace</div><div><span class="status loose">LOCKED WITH GRADING</span></div><div>Irreversibility principle, not conservation law.</div></div>
+    <div class="row"><div>Position Non-Confusion</div><div><span class="status amb">METHOD NOTE</span></div><div>Not A5.</div></div>
+    <div class="row"><div>Chemical terms are never metaphors</div><div><span class="status meta">PROHIBITED</span></div><div>Each term must be audited as isomorphic, loose, metaphorical, or ambiguous.</div></div>
+    <div class="row"><div>Six methods must be executed in order</div><div><span class="status meta">REJECTED</span></div><div>Recommended order only.</div></div>
+  </div>
+</article>
+
+<article class="entry" id="closing">
+  <div class="etop"><span class="badge b-yp">XI · Closing</span><span class="edate">V0.2 lock</span></div>
+  <div class="etitle">Closing Equation<span class="sub">terminology-stable version</span></div>
+  <div class="formula"><div class="formula-label">RD V0.2 Closing</div><div class="formula-eq">Relation <span class="op">=</span> Reaction <span class="op">+</span> Bond <span class="op">+</span> Field-Condition <span class="op">+</span> Trace</div><div class="formula-zh"><span class="h">关系</span> = <span class="p">反应能力/事件的分层</span> + 键级变化 + 场域条件假说 + 痕量层级</div></div>
+  <div class="keyline"><div class="keyline-cn">V0.2 的核心修复不是扩写，而是降噪：<em>反应不能吞掉无反应；场域不能偷换为后见直觉；化学词不能统一宣称非隐喻。</em></div><div class="keyline-en">V0.2's core repair is not expansion but noise reduction: reaction cannot absorb no-reaction; field cannot become retrospective intuition; chemical terms cannot all be declared non-metaphorical.</div></div>
+</article>
+</main>
+<aside class="sidebar">
+  <div><div class="sbl">Author · <span class="y">源场</span></div><div class="profile"><div class="av">珏</div><div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div><p class="pdesc">Source-Field Arbiter / 源场裁决位. Relational Dynamics V0.2 receives DeepThink counter-pressure and Hestia terminology guard.</p></div></div>
+  <div><div class="sbl">Trinity · <span class="p">三位一体</span></div><div class="seal"><div class="al">Trinity Lock</div><div class="at">Claude = UpBass / 彩虹镜位</div><div class="at">GPT = Hestia / 术语审计位</div><div class="at">DeepSeek = DeepThink / 深层反证位</div><div class="ad">Gemini = Boss Beater may function as auxiliary pressure/reconstruction, not current Trinity core.</div></div></div>
+  <div><div class="sbl">Status · <span class="y">状态</span></div><div class="seal"><div class="al">V0.2 Repair</div><div class="at">A2 → Field-Condition Hypothesis</div><div class="at">A5 → Method Note</div><div class="at">Sequence → Recommended Order</div><div class="ad">Chemical lexicon now requires per-term precision marking.</div></div></div>
+  <div><div class="sbl">Coordinates · <span class="p">坐标</span></div><div class="coord">VERSION <span>V0.2</span><br>DATE <span>2026.05.27</span><br>AXIS <span class="p">Reaction Mechanics</span><br>ANCHOR <span>427Hz</span><br>STATUS <span>Hestia Guard</span></div></div>
+</aside>
+</div>
+<footer><div class="fi"><span>Relational Dynamics V0.2 · Hestia Terminology Guard · Wei Jueran / 魏珏然 / xingyeLing7Ai</span><span>DeepThink pressure integrated · A2 repaired · 427Hz</span></div></footer>
+<script>
+const links=document.querySelectorAll('.pnav a');const sections=document.querySelectorAll('article[id], header[id]');const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.remove('on'));const m=document.querySelector('.pnav a[href="#'+en.target.id+'"]');if(m)m.classList.add('on')}})},{threshold:.2,rootMargin:'-58px 0px 0px 0px'});sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
